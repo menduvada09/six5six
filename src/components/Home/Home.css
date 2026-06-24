@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://six5six2025.myshopify.com/cdn/shop/files/656-Active-Cover-Updated.jpg?v=1772101388");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  filter: brightness(0);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.round-icon-wrapper {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #2b4560, #b15329) border-box;
+  border: 1px solid transparent;
+  padding: 2px;
+}
+
+.round-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.bookmark-icon {
+  width: 16px;
+  height: 24px;
+  display: block;
+  cursor: pointer;
+}
+
+.content {
+  text-align: left;
+  color: white;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+
+.content p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.content h2 {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 16px 36px;
+  border: 1px solid white;
+  border-radius: 40px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background: white;
+  color: black;
+}
+
+.pagination-dots {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.active-pill {
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #b8b8b8 50%, #ffffff 50%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 430px;
+    height: 940px;
+    margin: 0 auto;
+  }
+
+  .overlay {
+    padding: 25px;
+  }
+
+  .logo {
+    height: 16px;
+    width: 80px;
+  }
+
+  .icons {
+    gap: 12px;
+  }
+
+  .round-icon-wrapper {
+    height: 18px;
+    width: 18px;
+  }
+
+  .bookmark-icon {
+    width: 12px;
+    height: 19px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .content p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-right: 150px;
+  }
+
+  .content h2 {
+    font-size: 54px;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    margin-left: 15px;
+    gap: 12px;
+  }
+
+  .buttons button {
+    padding: 14.5px 28px;
+    font-size: 14px;
+  }
+
+  .pagination-dots {
+    bottom: 25px;
+    right: 25px;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .active-pill {
+    width: 24px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+}

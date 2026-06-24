@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f2f2cd;
+  color: #000000;
+}
+
+.contentWrapper {
+  margin: 0 auto;
+  padding: 5vw 2vw;
+  padding-bottom: 4vw;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: 800;
+  margin-top: 1vw;
+  margin-bottom: 1.5vw;
+  letter-spacing: -0.065vw;
+}
+
+.title {
+  font-size: 1.2vw;
+  letter-spacing: -0.05vw;
+}
+
+.policyText {
+  font-size: 1vw;
+  color: #111111;
+  line-height: 1.3vw;
+  letter-spacing: -0.02vw;
+}
+
+.policyText p {
+  margin-top: 0;
+  letter-spacing: 0vw;
+}
+
+.text {
+  margin-bottom: 2vw;
+}
+
+.policyText h3 {
+  font-size: 1vw;
+  font-weight: 700;
+  margin-top: 1.5vw;
+  margin-bottom: 0.5vw;
+  letter-spacing: -0.02vw;
+  color: #000000;
+}
+
+.policyText ul {
+  padding-left: 1.5vw;
+  margin-top: 0;
+  margin-bottom: 1vw;
+}
+
+.policyText li {
+  list-style-type: disc;
+  font-size: 0.85vw;
+}
+
+.policyText a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.policyText a:hover {
+  color: #444444;
+}
+
+@media (max-width: 430px) {
+  .contentWrapper {
+    width: 92vw;
+    padding-top: 20vw;
+    padding-bottom: 10vw;
+  }
+
+  .pageTitle {
+    font-size: 4.5vw;
+    margin-bottom: 4.5vw;
+    font-weight: normal;
+  }
+
+  .title {
+    font-size: 3.5vw;
+  }
+
+  .policyText {
+    font-size: 3.8vw;
+    line-height: 6.5vw;
+  }
+
+  .policyText p {
+    font-size: 3vw;
+    line-height: 5vw;
+  }
+
+  .policyText h3 {
+    font-size: 3.5vw;
+    margin-top: 3.5vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .policyText ul {
+    padding-left: 6vw;
+    padding-top: 0;
+    margin-bottom: 5vw;
+  }
+
+  .policyText li {
+    font-size: 3vw;
+  }
+}

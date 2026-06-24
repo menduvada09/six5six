@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.93vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.modalContent {
+  background-color: #f0f0f0;
+  width: 35vw;
+  height: 31.5vh;
+  border-radius: 0.5vw;
+  overflow: hidden;
+  box-shadow: 0 0.37vw 1.86vw rgba(0, 0, 0, 0.15);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw 1vw;
+  border-bottom: 0.09vw solid #e0e0e0;
+  background-color: #e5e5e5;
+}
+
+.modalTitle {
+  font-size: 0.85vw;
+  color: #111;
+}
+
+.closeBtn {
+  width: 1.5vw;
+  height: 1.5vw;
+  border: none;
+  border-radius: 50%;
+  background: #666;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modalBody {
+  padding: 0.8vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  font-size: 0.85vw;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.18vw;
+}
+
+.productPrice {
+  font-size: 0.8vw;
+  color: #666;
+  margin-bottom: 0.5vw;
+}
+
+.sizeLabel {
+  font-size: 0.85vw;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5vw;
+}
+
+.sizeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35vw;
+  margin-bottom: 0.5vw;
+}
+
+.sizeBtn {
+  background: #fff;
+  border: 0.09vw solid #e0e0e0;
+  border-radius: 0.55vw;
+  height: 2.5vw;
+  width: 7.8vw;
+  font-size: 0.85vw;
+  font-weight: 500;
+  cursor: pointer;
+  color: #111;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.sizeBtn.activeSize {
+  border: 0.18vw solid #e26137;
+  font-weight: 600;
+}
+
+.submitBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0.55vw;
+  padding: 0.75vw;
+  font-size: 0.85vw;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 430px) {
+  .modalOverlay {
+    align-items: flex-end;
+  }
+
+  .modalContent {
+    width: 96vw !important;
+    height: 27vh !important;
+    border-radius: 1vw !important;
+    margin-bottom: 1.5vw !important;
+    box-shadow: 0 -1vw 5vw rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .modalHeader {
+    padding: 1.5vw 2.5vw !important;
+    border-bottom: 0.2vw solid #e0e0e0 !important;
+  }
+
+  .modalTitle {
+    font-size: 3vw !important;
+  }
+
+  .closeBtn {
+    width: 6vw !important;
+    height: 6vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalBody {
+    padding: 2vw !important;
+  }
+
+  .productName {
+    font-size: 3vw !important;
+    margin-bottom: 0.1vw !important;
+  }
+
+  .productPrice {
+    font-size: 2.8vw !important;
+    margin-bottom: 1.45vw !important;
+  }
+
+  .sizeLabel {
+    font-size: 3vw !important;
+    margin-bottom: 1vw !important;
+  }
+
+  .sizeGrid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    width: 100% !important;
+    gap: 1vw !important;
+    margin-bottom: 1.8vw !important;
+  }
+
+  .sizeBtn {
+    width: 100% !important;
+    height: 8vw !important;
+    font-size: 2.8vw !important;
+    border: 0.2vw solid #e0e0e0 !important;
+    border-radius: 1.5vw !important;
+  }
+
+  .sizeBtn.activeSize {
+    border: 0.4vw solid #e26137 !important;
+  }
+
+  .submitBtn {
+    width: 100% !important;
+    padding: 3vw !important;
+    font-size: 3vw !important;
+    border-radius: 1.5vw !important;
+    margin-bottom: 2vw !important;
+  }
+}

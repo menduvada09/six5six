@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  margin: 0 auto;
+  padding: 7vw 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  padding-bottom: 5vw;
+}
+
+.mainTitle {
+  font-size: 1.8vw;
+  text-align: center;
+  letter-spacing: -0.02vw;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 1.2vw;
+  color: #333;
+  line-height: 1.6;
+  max-width: 65vw;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.sectionTitle {
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  letter-spacing: 0.05vw;
+}
+
+.text {
+  font-size: 1vw;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.details {
+  font-size: 1vw;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 22vw 6vw 10vw 6vw;
+    gap: 4vw;
+  }
+
+  .mainTitle {
+    font-size: 5vw;
+    letter-spacing: -0.05vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+    max-width: 100%;
+  }
+
+  .sectionBlock {
+    gap: 2vw;
+  }
+
+  .sectionTitle {
+    font-size: 4vw;
+    letter-spacing: 0.02vw;
+  }
+
+  p {
+    padding-top: 0vw;
+  }
+
+  .text {
+    font-size: 3.8vw;
+    line-height: 5.5vw;
+  }
+
+  .details {
+    font-size: 3.8vw;
+    line-height: 5.5vw;
+  }
+}

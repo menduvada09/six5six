@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.sectionContainer {
+  width: 100%;
+  padding-top: 1.8vw;
+  padding-bottom: 1.8vw;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 1vw;
+  letter-spacing: -0.05vw;
+  text-align: left;
+  padding-left: 1vw;
+}
+
+.scrollWrapper {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollWrapper::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.productsSlider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 18.72vw;
+  gap: 1.1vw;
+  padding-bottom: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  width: max-content;
+  box-sizing: border-box;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.3;
+  background-color: #f5f5f5;
+  border-radius: 1.5vw;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.customCardContent {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+.customCardText {
+  color: #ffffff;
+  font-size: 3.4vw;
+  font-weight: 800;
+  text-align: center;
+  line-height: 0.95;
+  letter-spacing: -0.05vw;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.badgeContainer {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  display: flex;
+  gap: 0.4vw;
+  z-index: 3;
+}
+
+.seasonBadge {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.7vw;
+  font-weight: bold;
+  padding: 0.25vw 0.5vw;
+  border-radius: 0.2vw;
+}
+
+.discountBadge {
+  background-color: #e65c00;
+  color: #ffffff;
+  font-size: 0.7vw;
+  font-weight: bold;
+  padding: 0.25vw 0.5vw;
+  border-radius: 0.2vw;
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1vw;
+  width: 100%;
+}
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+  flex: 1;
+  overflow: hidden;
+}
+
+.productTitle {
+  font-size: 0.8vw;
+  letter-spacing: -0.02vw;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.oldPrice {
+  color: #e65c00;
+  text-decoration: line-through;
+  font-size: 0.85vw;
+}
+
+.currentPrice {
+  font-size: 0.85vw;
+  color: #000000;
+  font-weight: bold;
+}
+
+.addBtn {
+  background-color: #dcdbdc;
+  border: none;
+  padding: 0.4vw 0.8vw;
+  border-radius: 5vw;
+  display: flex;
+  align-items: center;
+  gap: 0.4vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.addBtn:hover {
+  background-color: #cbd5e0;
+}
+
+.addText {
+  font-size: 0.75vw;
+  font-weight: bold;
+  color: #000000;
+}
+
+.cartIconSvg {
+  width: 0.8vw;
+  height: 0.8vw;
+  color: #000000;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .productsSlider {
+    grid-auto-columns: 28vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .sectionTitle {
+    font-size: 2.5vw;
+    padding-left: 2vw;
+  }
+  .productTitle {
+    font-size: 1.8vw;
+  }
+  .currentPrice,
+  .oldPrice {
+    font-size: 1.6vw;
+  }
+  .cartIconSvg {
+    width: 1.6vw;
+    height: 1.6vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .productsSlider {
+    grid-auto-columns: 42vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .sectionTitle {
+    font-size: 4.5vw;
+    padding-left: 3vw;
+  }
+  .productTitle {
+    font-size: 2.8vw;
+  }
+  .currentPrice,
+  .oldPrice {
+    font-size: 2.4vw;
+  }
+  .cartIconSvg {
+    width: 2.4vw;
+    height: 2.4vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .sectionContainer {
+    padding-top: 10vw;
+    background-color: #dcdbdc;
+  }
+
+  .sectionTitle {
+    font-size: 5.58vw;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 4.65vw;
+    letter-spacing: -0.11vw;
+  }
+
+  .productsSlider {
+    grid-auto-columns: 46.51vw;
+    gap: 2.32vw;
+    padding-left: 2.32vw;
+    padding-right: 2.32vw;
+    padding-bottom: 2.32vw;
+  }
+
+  .imageWrapper {
+    border-radius: 4.65vw;
+  }
+
+  .customCardContent {
+    padding: 3.48vw;
+  }
+
+  .customCardText {
+    font-size: 11.62vw;
+    letter-spacing: -0.23vw;
+  }
+
+  .badgeContainer {
+    top: 2.32vw;
+    left: 2.32vw;
+    gap: 1.16vw;
+  }
+
+  .seasonBadge,
+  .discountBadge {
+    font-size: 2.32vw;
+    padding: 0.93vw 1.86vw;
+    border-radius: 0.93vw;
+  }
+
+  .detailsRow {
+    margin-top: 2.32vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .metaInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
+    padding-right: 1.5vw;
+  }
+
+  .productTitle {
+    font-size: 3vw;
+    letter-spacing: -0.05vw;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    width: 100%;
+    line-height: 4.18vw;
+  }
+
+  .priceContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 1.2vw;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .oldPrice,
+  .currentPrice {
+    font-size: 2.65vw;
+    display: inline-block;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .addBtn {
+    padding: 1.39vw 2.79vw;
+    gap: 1.16vw;
+    background-color: #ededed;
+    border-radius: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0vw;
+  }
+
+  .addText {
+    font-size: 2.55vw;
+  }
+
+  .cartIconSvg {
+    width: 2.32vw;
+    height: 2.32vw;
+  }
+}

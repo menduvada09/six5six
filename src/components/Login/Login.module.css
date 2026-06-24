@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #f5f5f5;
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 0 6vw;
+}
+
+.loginHeading {
+  font-size: 7.5vw;
+  color: #000000;
+  padding-bottom: 6vw;
+  font-weight: 600;
+}
+
+.shopPayBtn {
+  background-color: #5a31f4;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 3.5vw 0;
+  font-size: 4.2vw;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 1.5vw;
+  display: flex;
+  letter-spacing: -0.1vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopText {
+  font-weight: 700;
+  margin-left: 1vw;
+}
+
+.divider {
+  font-size: 4vw;
+  color: #000000;
+  margin: 4vw 0;
+  font-weight: 500;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4vw;
+  align-items: center;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.formInput {
+  width: 100%;
+  height: 12.5vw;
+  padding-left: 4vw;
+  font-size: 3.8vw;
+  border: 0.278vw solid #a3a3a3;
+  border-radius: 1.5vw;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.forgotPasswordRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1vw;
+}
+
+.inlineLink {
+  font-size: 3.5vw;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.signInSubmitBtn {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  width: 35vw;
+  padding: 3.5vw 0;
+  font-size: 3.8vw;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 4vw;
+  border-radius: 1.5vw;
+}
+
+.createAccountRow {
+  margin-top: 3vw;
+}
+
+@media (min-width: 1024px) {
+  .loginContainer {
+    padding-top: 4.3vw;
+    padding: 0;
+  }
+
+  .loginHeading {
+    font-size: 2.5vw;
+    padding-bottom: 2vw;
+  }
+
+  .shopPayBtn {
+    width: 14vw;
+    padding: 0.8vw 0;
+    font-size: 1.2vw;
+    border-radius: 0.3vw;
+    letter-spacing: -0.05vw;
+  }
+
+  .shopText {
+    margin-left: 0.3vw;
+  }
+
+  .divider {
+    font-size: 1.2vw;
+    margin: 1vw 0;
+  }
+
+  .loginForm {
+    width: 35vw;
+    gap: 1.3vw;
+  }
+
+  .formInput {
+    height: 3.2vw;
+    padding-left: 1vw;
+    font-size: 1vw;
+    border: 0.08vw solid #a3a3a3;
+    border-radius: 0;
+  }
+
+  .forgotPasswordRow {
+    margin-top: 0;
+  }
+
+  .inlineLink {
+    font-size: 1vw;
+  }
+
+  .signInSubmitBtn {
+    width: 8vw;
+    padding: 0.8vw 0;
+    font-size: 1vw;
+    margin-top: 2vw;
+    border-radius: 0;
+  }
+
+  .createAccountRow {
+    margin-top: 0.5vw;
+  }
+}

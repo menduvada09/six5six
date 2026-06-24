@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #f2f2f2;
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.filterBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 14vw;
+  padding: 0 4vw;
+  background-color: #ffffff;
+  border: 0.5px solid orangered;
+  position: fixed;
+  top: 16vw;
+  left: 0;
+  gap: 2vw;
+  z-index: 9999;
+}
+
+.filterTitle {
+  color: #e26137;
+  font-size: 4vw;
+  font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+
+.tagList {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  flex-grow: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tagList::-webkit-scrollbar {
+  display: none;
+}
+
+.tagButton {
+  background-color: #f4f4f4;
+  color: #555555;
+  border: none;
+  border-radius: 1.5vw;
+  padding: 1.5vw 3vw;
+  font-size: 3vw;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  font-weight: 900;
+  transition: background-color 0.2s ease;
+}
+
+.tagButton:hover {
+  background-color: #e9e9e9;
+}
+
+.advanceFilterButton {
+  background: linear-gradient(90deg, #422219 0%, #e26137 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 1.5vw;
+  padding: 1.5vw 3vw;
+  font-size: 3vw;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 30vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 12vw;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5vw 4vw;
+  width: 100%;
+  margin-top: 4vw;
+}
+
+.card {
+  background: none;
+  display: block;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.25;
+  background-color: #ebebeb;
+  border-radius: 4vw;
+  overflow: hidden;
+  margin-bottom: 2.5vw;
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.badgeRow {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.discountBadge {
+  background-color: #e65c2b;
+  color: white;
+  font-size: 2.8vw;
+  font-weight: 700;
+  padding: 0.8vw 2vw;
+  border-radius: 1vw;
+  display: inline-block;
+  width: fit-content;
+}
+
+.seasonBadge {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 2.5vw;
+  font-weight: 700;
+  padding: 0.8vw 2vw;
+  border-radius: 1vw;
+  display: inline-block;
+  width: fit-content;
+}
+
+.bookmarkButton {
+  position: absolute;
+  top: 2.5vw;
+  right: 2.5vw;
+  z-index: 2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 6vw;
+  height: 6vw;
+  padding: 0;
+  color: #ffffff;
+}
+
+.bookmarkButton svg {
+  width: 100%;
+  height: 100%;
+}
+
+.detailsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 1vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  max-width: 60%;
+}
+
+.productTitle {
+  font-size: 3.2vw;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.oldPrice {
+  color: #e65c2b;
+  text-decoration: line-through;
+  font-size: 2.8vw;
+  display: flex;
+}
+
+.currentPrice {
+  color: #000000;
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+.buttonSide {
+  display: flex;
+  align-items: center;
+}
+
+.addButton {
+  background-color: #d1d5db;
+  border: none;
+  border-radius: 5vw;
+  padding: 2vw 3vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.addText {
+  font-size: 2.8vw;
+  font-weight: 900;
+  letter-spacing: -0.1vw;
+  color: #000000;
+  line-height: 1;
+}
+
+.bagIcon {
+  width: 4vw;
+  height: 4vw;
+  display: block;
+}
+
+.bagHandle {
+  fill: #000000;
+}
+
+.bagBody {
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width: 2.5;
+}
+
+.paginationRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10vw;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8vw;
+}
+
+.pageItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pageNumber {
+  font-size: 4vw;
+  color: #777777;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.activeItem .pageNumber {
+  color: #000000;
+  font-weight: 600;
+}
+
+.activeLine {
+  position: absolute;
+  bottom: -1.5vw;
+  width: 5vw;
+  height: 0.6vw;
+  background-color: #000000;
+}
+
+.pageArrow {
+  font-size: 4vw;
+  color: #000000;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .filterBarContainer {
+    height: 3vw;
+    padding: 0 2.778vw;
+    top: 4.717vw;
+    gap: 1vw;
+  }
+
+  .filterTitle {
+    font-size: 1vw;
+  }
+
+  .tagList {
+    gap: 0.5vw;
+    overflow-x: visible;
+  }
+
+  .tagButton {
+    border-radius: 0.278vw;
+    padding: 0.5vw 0.7vw;
+    font-size: 0.7vw;
+  }
+
+  .advanceFilterButton {
+    border-radius: 0.347vw;
+    padding: 0.556vw 1.389vw;
+    font-size: 0.833vw;
+  }
+
+  .wrapper {
+    padding-top: 9vw;
+    padding-left: 1.4vw;
+    padding-right: 1.4vw;
+    padding-bottom: 3vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2.5vw 1vw;
+    margin-top: 0;
+  }
+
+  .imageContainer {
+    border-radius: 1.5vw;
+    margin-bottom: 1.1vw;
+  }
+
+  .badgeRow {
+    top: 1vw;
+    left: 1vw;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .discountBadge {
+    font-size: 0.75vw;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+  }
+
+  .seasonBadge {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .bookmarkButton {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .detailsContainer {
+    padding: 0 4px;
+    align-items: center;
+  }
+
+  .textSide {
+    gap: 4px;
+    max-width: 65%;
+  }
+
+  .productTitle {
+    font-size: 14px;
+  }
+
+  .priceContainer {
+    flex-direction: row;
+  }
+
+  .oldPrice {
+    font-size: 13px;
+    margin-right: 8px;
+  }
+
+  .currentPrice {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .addButton {
+    border-radius: 14px;
+    padding: 6px 14px;
+    gap: 6px;
+  }
+
+  .addText {
+    font-size: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .bagIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .paginationRow {
+    justify-content: flex-end;
+    margin-top: 3vw;
+    padding-right: 43%;
+  }
+
+  .pagination {
+    gap: 36px;
+  }
+
+  .pageNumber {
+    font-size: 15px;
+  }
+
+  .activeLine {
+    bottom: -6px;
+    width: 20px;
+    height: 2px;
+  }
+
+  .pageArrow {
+    font-size: 15px;
+  }
+}

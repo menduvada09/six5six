@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.1vw;
+}
+
+.logo {
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 4.2vw;
+}
+
+.content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.4vw;
+  width: 100%;
+  gap: 0.7vw;
+}
+
+.content h2 {
+  font-size: 1.5vw;
+  font-weight: 900;
+}
+
+.content p {
+  font-size: 0.7vw;
+  line-height: 0.9vw;
+  width: 80%;
+  color: #ffffff;
+}
+
+.content button {
+  height: 2.8vw;
+  width: 7vw;
+  background-color: transparent;
+  color: white;
+  border: 1px solid orangered;
+  margin-top: 1.4vw;
+}
+
+.time1 {
+  display: none;
+}
+
+.right {
+  width: 60%;
+  height: 70vh;
+  position: relative;
+  padding-left: 3.5vw;
+}
+
+.top {
+  height: 50%;
+  padding-top: 3.5vw;
+  display: flex;
+  justify-content: start;
+  gap: 8.4vw;
+  align-items: center;
+  letter-spacing: -0.035vw;
+}
+
+.start,
+.middle,
+.end {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+}
+
+.header {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05vw;
+  font-size: 0.8vw;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1vw;
+  color: #ffffff;
+}
+
+.bottom {
+  height: 50%;
+  display: flex;
+  justify-content: start;
+  gap: 4.9vw;
+  align-items: center;
+  letter-spacing: -0.035vw;
+  padding-bottom: 7.7vw;
+}
+
+.first,
+.second {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+}
+
+.first div {
+  display: flex;
+  gap: 0.42vw;
+}
+
+.first button {
+  padding: 0.07vw 0.35vw;
+  color: orangered;
+  font-size: 0.63vw;
+}
+
+.buttonsContainer {
+  position: absolute;
+  bottom: 2.8vw;
+  right: 2.1vw;
+  display: flex;
+  gap: 0.56vw;
+  align-items: center;
+}
+
+.signUpBtn,
+.memberBtn {
+  height: 3.15vw;
+  background-color: transparent;
+  color: white;
+  border: 1px solid orangered;
+  font-size: 0.63vw;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.035vw;
+}
+
+.signUpBtn {
+  width: 7.7vw;
+}
+
+.memberBtn {
+  width: 14vw;
+}
+
+.copyrightBar {
+  width: 100%;
+  border-top: 1px solid orangered;
+  padding: 1.19vw 2.1vw;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 0.7vw;
+  letter-spacing: 0.035vw;
+}
+
+.copyLeft {
+  color: white;
+}
+
+.copyRight {
+  display: flex;
+  gap: 2.1vw;
+  margin-left: 3.5vw;
+}
+
+.copyRight span {
+  cursor: pointer;
+  letter-spacing: -0.02vw;
+  transition: color 0.2s;
+}
+
+.time {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.copyRight a,
+.header a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 12vw 5vw 0vw 5vw;
+    background-color: #000000;
+    position: relative;
+  }
+
+  .left {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    display: contents;
+  }
+
+  .left .logo {
+    display: flex;
+    order: 10;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 12vw 0 6vw 0;
+  }
+
+  .left .logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .content {
+    height: auto;
+    padding-top: 0;
+    gap: 4vw;
+    order: 1;
+  }
+
+  .content h2 {
+    font-size: 5vw;
+    line-height: 1.1;
+    font-weight: 900;
+  }
+
+  .content p {
+    font-size: 2vw;
+    line-height: 2.5vw;
+    width: 100%;
+    color: #ffffff;
+  }
+
+  .content button {
+    height: 8vw;
+    width: 25vw;
+    font-size: 2.5vw;
+    margin-top: 4vw;
+    border: 0.3vw solid #e2583e;
+    font-weight: 600;
+    background-color: transparent;
+    color: #ffffff;
+    letter-spacing: 0.05vw;
+  }
+
+  .time1 {
+    display: inline-block;
+    font-size: 2.5vw;
+    color: #888888;
+    position: absolute;
+    top: 42vw;
+    left: 71vw;
+  }
+
+  .right {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    margin-top: 8vw;
+    order: 2;
+  }
+
+  .top,
+  .bottom {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: stretch;
+    letter-spacing: normal;
+  }
+
+  .start,
+  .middle,
+  .end,
+  .first,
+  .second {
+    gap: 0;
+    width: 100%;
+    border-top: 0.3vw solid #1a1a1a;
+    padding: 5vw 0;
+  }
+
+  .title {
+    font-size: 3vw;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  .header {
+    display: none;
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: 4vw;
+    list-style: none;
+    padding-left: 0;
+    font-size: 3.5vw;
+  }
+
+  .header li {
+    color: #888888;
+    font-size: 3vw;
+    padding-left: 2vw;
+  }
+
+  .first div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .first button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 2.5vw;
+    padding: 0.8vw;
+    margin-left: 2vw;
+    border: 1px solid orangered;
+  }
+
+  .buttonsContainer {
+    display: none;
+  }
+
+  .title::after {
+    content: "+";
+    font-size: 5vw;
+    font-weight: 300;
+  }
+
+  :global(.open) .title::after {
+    content: "-";
+  }
+
+  :global(.open) .header {
+    display: flex;
+  }
+
+  .copyrightBar {
+    width: 100%;
+    background-color: #000000;
+    border-top: 0.3vw solid #e2583e;
+    padding: 5vw 5vw 6vw 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+  }
+
+  .copyLeft {
+    font-size: 2vw;
+    font-weight: 500;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  .copyRight {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5vw;
+    font-size: 2vw;
+    margin-left: 0;
+  }
+
+  .copyRight span {
+    font-size: 2vw;
+    font-weight: 500;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+
+  .time {
+    display: none;
+  }
+}

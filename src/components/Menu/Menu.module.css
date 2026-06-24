@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  height: 23px;
+  width: 100%;
+  background: linear-gradient(90deg, #f15a22 0%, #ffa37b 50%, #f15a22 100%)
+    no-repeat padding-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner {
+  font-size: 11px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.closeButton {
+  position: absolute;
+  right: 20px;
+  height: 14px;
+  width: 14px;
+  background: #ffffff;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px;
+  color: #f15a22;
+}
+
+.closeButton svg {
+  height: 100%;
+  width: 100%;
+}
+
+.menu {
+  background-color: #111111;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu li img {
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+.menuText {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bagContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28px;
+  height: 32px;
+  position: relative;
+}
+
+.bagHandle {
+  width: 12px;
+  height: 6px;
+  border: 2px solid #ffffff;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: transparent;
+  margin-bottom: -1px;
+  z-index: 1;
+}
+
+.bagBody {
+  width: 22px;
+  height: 21px;
+  background-color: #f5f5f5;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.patternImg {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 430px;
+    margin: 0 auto;
+  }
+
+  .closeButton {
+    right: 10px;
+  }
+
+  .menu {
+    width: 430px;
+    margin: 0 auto;
+  }
+
+  .menu ul {
+    padding: 0 10px;
+  }
+
+  .menuText {
+    font-size: 14px;
+  }
+
+  .menu li img {
+    height: 20px;
+  }
+
+  .menu li svg {
+    transform: scale(0.9);
+  }
+
+  .bagContainer {
+    transform: scale(0.85);
+  }
+}

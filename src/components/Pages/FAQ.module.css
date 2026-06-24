@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.faqPage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6.5vw;
+  padding-bottom: 3vw;
+}
+
+.faqHeading {
+  font-size: 1.6vw;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 1.6vw;
+  letter-spacing: -0.02vw;
+}
+
+.accordionContainer {
+  width: 93.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.accordionItem {
+  width: 100%;
+  background-color: #e5e5e5;
+  border-radius: 0.8vw;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 0.8vw 1.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8vw;
+  letter-spacing: -0.02vw;
+  font-weight: 900;
+  color: #000000;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  font-size: 1.4vw;
+  font-weight: 300;
+}
+
+.accordionBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: #ffffff;
+  transform-origin: top;
+}
+
+.accordionInner {
+  overflow: hidden;
+}
+
+.accordionBody p {
+  font-size: 0.8vw;
+  line-height: 1.5;
+  padding: 1.2vw 1.6vw;
+  color: #333333;
+  letter-spacing: -0.025vw;
+}
+
+.listContainer {
+  list-style-type: disc;
+  padding: 1.2vw 1.8vw 1.2vw 2.5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  font-size: 0.8vw;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.accordionItem.open {
+  background-color: #dddddd;
+}
+
+.accordionItem.open .accordionBody {
+  grid-template-rows: 1fr;
+}
+
+@media (max-width: 430px) {
+  .faqPage {
+    padding-top: 20vw;
+    padding-bottom: 10vw;
+  }
+
+  .faqHeading {
+    font-size: 5vw;
+    letter-spacing: -0.4vw;
+    margin-bottom: 5vw;
+  }
+
+  .accordionContainer {
+    width: 90vw;
+    gap: 4vw;
+  }
+
+  .accordionItem {
+    border-radius: 4vw;
+  }
+
+  .accordionHeader {
+    padding: 5vw;
+    font-size: 3.8vw;
+  }
+
+  .icon {
+    font-size: 5vw;
+  }
+
+  .accordionBody p {
+    font-size: 3.4vw;
+    padding: 4.2vw;
+  }
+
+  .listContainer {
+    padding: 3vw 3vw 3vw 8vw;
+    gap: 0.5vw;
+  }
+
+  .listItem {
+    font-size: 3.4vw;
+    line-height: 1.5;
+  }
+}

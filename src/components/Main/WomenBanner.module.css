@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.backgroundImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.contentOverlay {
+  position: sticky;
+  padding-top: 2vw;
+  top: 75vh;
+  left: 2%;
+  color: #ffffff;
+  text-align: left;
+  z-index: 2;
+  max-width: 90%;
+  bottom: auto;
+  padding-bottom: 2vh;
+}
+
+.subheading {
+  font-size: 1.222vw;
+  display: block;
+  margin-bottom: 0.556vw;
+  color: #ffffff;
+}
+
+.heading {
+  font-size: 3vw;
+  margin: 0 0 1.5vw 0;
+  color: #ffffff;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1.111vw;
+  flex-wrap: wrap;
+}
+
+.btnFilled,
+.btnOutline {
+  display: inline-block;
+  padding: 0.972vw 2.778vw;
+  font-size: 1.056vw;
+  text-decoration: none;
+  border-radius: 3.472vw;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: center;
+  min-width: 9.722vw;
+  box-sizing: border-box;
+}
+
+.btnFilled {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btnFilled:hover {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.btnOutline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.btnOutline:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 430px) {
+  .contentOverlay {
+    top: 88vh;
+  }
+
+  .subheading {
+    font-size: 3vw !important;
+  }
+
+  .heading {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  .btnFilled,
+  .btnOutline {
+    padding: 2vw 4vw;
+    font-size: 3vw;
+  }
+}

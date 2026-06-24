@@ -1,0 +1,632 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 1.5vw;
+  padding-bottom: 1.5vw;
+  z-index: 99999;
+  box-sizing: border-box;
+}
+
+.modalBody {
+  width: 32vw;
+  background-color: #ffffff;
+  padding: 1.5vw 1vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  border-radius: 0.6vw;
+  box-shadow: 0 0.4vw 3vw rgba(0, 0, 0, 0.15);
+  border: 0.07vw solid #e2e2e2;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalBody::-webkit-scrollbar {
+  display: none;
+}
+
+.modalBody {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.555vw;
+}
+
+.discountBadge {
+  background-color: #e65c00;
+  color: #ffffff;
+  font-size: 0.7vw;
+  font-weight: bold;
+  padding: 0.2vw 0.4vw;
+  border-radius: 0.2vw;
+}
+
+.seasonBadge {
+  background-color: #e2e8f0;
+  color: #4a5568;
+  font-size: 0.7vw;
+  font-weight: bold;
+  padding: 0.2vw 0.4vw;
+  border-radius: 0.2vw;
+}
+
+.ratingBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.ratingLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.1vw;
+}
+
+.wreathIcon {
+  height: 2vw;
+  width: auto;
+  display: block;
+}
+
+.ratingText {
+  font-size: 1.1vw;
+  font-weight: 900;
+  color: #e65c00;
+}
+
+.ratingRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ratingCountValue {
+  font-size: 0.8vw;
+  font-weight: 800;
+  color: #333333;
+  line-height: 1.1;
+}
+
+.ratingLabel {
+  font-size: 0.8vw;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.1;
+}
+
+.title {
+  font-size: 1.2vw;
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: -0.05vw;
+  margin: 0;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.oldPrice {
+  color: #e65c00;
+  text-decoration: line-through;
+  font-size: 0.9vw;
+}
+
+.currentPrice {
+  font-weight: bold;
+  font-size: 0.9vw;
+  color: #000000;
+}
+
+.personalizationBox {
+  border: none;
+  margin-top: 0.28vw;
+  margin-bottom: 0.4vw;
+}
+
+.personalizeTag {
+  background-color: #e2e8f0;
+  color: #000000;
+  font-size: 0.7vw;
+  font-weight: bold;
+  padding: 0.15vw 0.3vw;
+  border-radius: 0.2vw;
+  display: inline-block;
+  margin-bottom: 0.4vw;
+}
+
+.personalizeDesc {
+  font-size: 0.8vw;
+  color: #4a5568;
+  margin: 0 0 0.2vw 0;
+}
+
+.personalizePrice {
+  font-size: 0.8vw;
+  color: #e65c00;
+  margin: 0 0 0.6vw 0;
+}
+
+.inputRow {
+  display: flex;
+  gap: 0.6vw;
+}
+
+.inputGroupSmall {
+  flex: 1;
+}
+
+.inputGroupLarge {
+  flex: 3;
+}
+
+.customFieldset {
+  border: 0.069vw solid #cbd5e0;
+  border-radius: 0.555vw;
+  padding: 0 0.6vw 0.4vw 0.6vw;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.customLegend {
+  font-size: 0.7vw;
+  color: #718096;
+  padding: 0 0.4vw;
+  margin-left: 0.4vw;
+}
+
+.fieldsetInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -0.2vw;
+}
+
+.fieldsetInner input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.8vw;
+  color: #000000;
+  background: transparent;
+  padding: 0.2vw 0;
+  padding-top: 0.5vw;
+}
+
+.charCount {
+  font-size: 0.8vw;
+  padding-top: 0.5vw;
+  color: #718096;
+  white-space: nowrap;
+  margin-left: 0.5vw;
+}
+
+.priceCalculationRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  font-size: 1vw;
+  font-weight: 500;
+  color: #9b9b9b;
+  margin-top: 1vw;
+}
+
+.operator {
+  color: #f39c7e;
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+
+.totalCalculatedPrice {
+  color: #9b9b9b;
+}
+
+.trueToSize {
+  font-size: 0.9vw;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 0.2vw;
+}
+
+.trueToSize::before {
+  content: "";
+  width: 0.5vw;
+  height: 0.5vw;
+  background-color: #000000;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.sizeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+}
+
+.sizeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8vw;
+  color: #000000;
+}
+
+.sizeGuideBtn {
+  background: #e2e8f0;
+  border: none;
+  padding: 0.2vw 0.4vw;
+  border-radius: 0.2vw;
+  font-size: 0.7vw;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sizeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3vw;
+}
+
+.sizeBtn {
+  border: 0.069vw solid #cbd5e0;
+  background: #ffffff;
+  padding: 0.5vw 0;
+  border-radius: 0.416vw;
+  font-size: 0.8vw;
+  font-weight: bold;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sizeBtnActive {
+  border: 0.069vw solid #e65c00;
+  background: #fffaf0;
+  color: #000000;
+}
+
+.actionRow {
+  display: flex;
+  gap: 0.6vw;
+  padding-top: 0.2vw;
+  padding-bottom: 0.2vw;
+}
+
+.addToCartBtn {
+  flex: 1;
+  border: 0.069vw solid #000000;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.6vw 0;
+  border-radius: 0.416vw;
+  font-size: 0.85vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buyNowBtn {
+  flex: 1;
+  border: none;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 0.6vw 0;
+  border-radius: 0.416vw;
+  font-size: 0.85vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tabsContainer {
+  background-color: #f7f7f7;
+  border-radius: 0.8vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border: 0.069vw solid #e2e8f0;
+  margin-top: 0.4vw;
+}
+
+.tabsHeader {
+  display: flex;
+  background: transparent;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+  position: relative;
+}
+
+.tabsHeader::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1.2vw;
+  right: 1.2vw;
+  height: 0.069vw;
+  background-color: #cbd5e0;
+  z-index: 1;
+}
+
+.tabLink {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0.8vw 0;
+  font-size: 0.85vw;
+  color: #718096;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+
+.tabLinkActive {
+  color: #000000;
+  font-weight: bold;
+}
+
+.tabLinkActive::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.15vw;
+  background-color: #c6c4c4;
+}
+
+.tabContent {
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  padding-top: 1vw;
+  padding-bottom: 1.5vw;
+}
+
+.tagRow {
+  display: flex;
+  gap: 0.6vw;
+  margin-bottom: 1vw;
+}
+
+.infoTag {
+  background: #ffffff;
+  padding: 0.4vw 1.2vw;
+  border-radius: 5vw;
+  font-size: 0.75vw;
+  color: #333333;
+  font-weight: bold;
+  box-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.05);
+}
+
+.descriptionText {
+  font-size: 0.7vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+  color: #4a5568;
+  line-height: 0.95vw;
+}
+
+.descriptionText1 {
+  font-size: 0.7vw;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vw;
+  color: #4a5568;
+  line-height: 0.95vw;
+  padding-left: 0.5vw;
+}
+
+@media (max-width: 430px) {
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .modalBody {
+    width: 100vw;
+    min-height: 50vh;
+    padding: 4.65vw 3.72vw;
+    gap: 3vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    margin-bottom: 2vw;
+    border-radius: 5.5vw;
+    box-shadow: 0 -0.93vw 4.65vw rgba(0, 0, 0, 0.15);
+  }
+
+  .operator {
+    font-size: 4vw;
+  }
+
+  .headerRow {
+    align-items: flex-start;
+  }
+
+  .badgeGroup {
+    gap: 1.39vw;
+  }
+
+  .discountBadge,
+  .seasonBadge {
+    font-size: 2.55vw;
+    padding: 0.93vw 1.39vw;
+    border-radius: 0.93vw;
+  }
+
+  .ratingBox {
+    display: none;
+  }
+
+  .trueToSize::before {
+    content: "";
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: #000000;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .trueToSize {
+    font-size: 3vw;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+
+  .title {
+    font-size: 4.65vw;
+    line-height: 1.2;
+    letter-spacing: -0.11vw;
+    margin-top: 0.93vw;
+  }
+
+  .priceRow {
+    gap: 1.86vw;
+    margin-top: -0.5vw;
+  }
+
+  .oldPrice {
+    font-size: 3.48vw;
+  }
+
+  .currentPrice {
+    font-size: 4.18vw;
+  }
+  .priceCalculationRow {
+    font-size: 3.5vw;
+    padding-top: 1vw;
+  }
+
+  .personalizationBox {
+    margin-top: 0.5vw;
+    margin-bottom: 0;
+  }
+
+  .personalizeTag {
+    font-size: 2.55vw;
+    padding: 0.93vw 1.86vw;
+    border-radius: 0.93vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .personalizeDesc {
+    font-size: 2.79vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .personalizePrice {
+    font-size: 2.79vw;
+    margin-bottom: 2vw;
+  }
+
+  .inputRow {
+    gap: 2.79vw;
+  }
+
+  .customFieldset {
+    border-width: 0.23vw;
+    border-radius: 1.86vw;
+    padding: 0 2.79vw 1.39vw 2.79vw;
+  }
+
+  .customLegend {
+    font-size: 2.55vw;
+    padding: 0 0.93vw;
+    margin-left: 0;
+  }
+
+  .fieldsetInner {
+    margin-top: 0;
+  }
+
+  .fieldsetInner input {
+    font-size: 3.25vw;
+    padding: 1.39vw 0;
+  }
+
+  .charCount {
+    font-size: 2.55vw;
+    padding-top: 1.39vw;
+  }
+
+  .sizeSection {
+    gap: 2vw;
+    margin-top: 0.5vw;
+  }
+
+  .sizeHeader {
+    font-size: 3.02vw;
+  }
+
+  .sizeGuideBtn {
+    padding: 0.93vw 1.86vw;
+    border-radius: 0.93vw;
+    font-size: 2.55vw;
+  }
+
+  .sizeGrid {
+    gap: 1.86vw;
+  }
+
+  .sizeBtn {
+    border-width: 0.23vw;
+    padding: 2.5vw 0;
+    border-radius: 1.86vw;
+    font-size: 3.02vw;
+  }
+
+  .actionRow {
+    gap: 2.79vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    margin-top: auto;
+  }
+
+  .addToCartBtn,
+  .buyNowBtn {
+    padding: 3vw 0;
+    border-radius: 1.86vw;
+    font-size: 3.25vw;
+    border-width: 0.23vw;
+  }
+}

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  width: 100vw;
+  min-height: 95vh;
+  padding: 8vw 2vw;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.header {
+  margin-bottom: 2vw;
+}
+
+.title {
+  font-size: 1.5vw;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.05vw;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.paragraph {
+  font-size: 1vw;
+  line-height: 1.3vw;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.footer {
+  padding-top: 1vw;
+}
+
+.tagline {
+  font-size: 1vw;
+  margin: 0 0 1vw 0;
+}
+
+.brandName {
+  font-size: 1vw;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 0vw 6vw;
+    padding-top: 25vw;
+  }
+
+  .header {
+    margin-bottom: 5vw;
+  }
+
+  .title {
+    font-size: 5vw;
+    letter-spacing: -0.2vw;
+  }
+
+  .content {
+    gap: 5vw;
+  }
+
+  .paragraph {
+    font-size: 3vw;
+    line-height: 4.5vw;
+  }
+
+  .footer {
+    padding-top: 8vw;
+  }
+
+  .tagline {
+    font-size: 3vw;
+    margin: 0 0 3vw 0;
+  }
+
+  .brandName {
+    font-size: 4.2vw;
+  }
+}

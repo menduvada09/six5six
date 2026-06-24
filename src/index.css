@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "nits-UIText-Regular";
+  src: url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-UIText-Regular.woff2?v=1763196595")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-UIText-Regular.woff?v=1763196595")
+      format("woff");
+}
+
+@font-face {
+  font-family: "nits-Pro-Display-Regular";
+  src: url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Display-Regular.woff2?v=1767865690")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Display-Regular.woff?v=1767865690")
+      format("woff");
+}
+
+@font-face {
+  font-family: "nits-Pro-Text-Medium";
+  src: url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Text-Medium.woff2?v=1763449888")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Text-Medium.woff?v=1763449889")
+      format("woff");
+}
+
+@font-face {
+  font-family: "nits-Pro-Display-Bold";
+  src: url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Display-Bold.woff2?v=1763450228")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Display-Bold.woff?v=1763450228")
+      format("woff");
+}
+
+@font-face {
+  font-family: "nits-Pro-Display-Medium";
+  src: url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Display-Medium.woff2?v=1766495991")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-Pro-Display-Medium.woff?v=1766495992")
+      format("woff");
+}
+
+@font-face {
+  font-family: "nits-spartan-mb-regular";
+  src: url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-spartan-mb-regular.woff2?v=1767864807")
+      format("woff2"),
+    url("https://cdn.shopify.com/s/files/1/0566/7192/8425/files/nits-spartan-mb-regular.woff?v=1767864806")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "nits-UIText-Regular";
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}

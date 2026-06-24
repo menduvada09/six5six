@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.wishlistPage {
+  width: 100vw;
+  min-height: 75vh;
+  padding-top: 8vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background-color: #ffffff;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0vw 1vw 0vw 1vw;
+}
+
+.mainHeading {
+  font-size: 0.8vw;
+  letter-spacing: -0.03vw;
+  font-weight: 700;
+  padding-bottom: 0.2vw;
+  color: #000000;
+}
+
+.subHeading {
+  font-size: 0.7vw;
+  letter-spacing: -0.03vw;
+  color: #555555;
+  margin: 0;
+}
+
+.loginSaveBtn {
+  background-color: #e65c19;
+  color: #ffffff;
+  border: none;
+  padding: 0.8vw 1.5vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  border-radius: 2vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw 0 5vw 0;
+}
+
+.heartIconWrapper {
+  background-color: rgb(255, 234, 255);
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2vw;
+}
+
+.contentTitle {
+  font-size: 0.85vw;
+  font-weight: 700;
+  padding-bottom: 0.1vw;
+  letter-spacing: 0.05vw;
+  font-family: "nits-Pro-Display-Bold";
+  color: #000000;
+}
+
+.contentDescription {
+  font-size: 0.8vw;
+  color: #000000;
+  margin-bottom: 0.8vw;
+}
+
+.heartSymbol {
+  font-size: 0.9vw;
+}
+
+.alertBox {
+  background-color: #fef7ea;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  padding: 0.5vw 0.85vw;
+  margin-bottom: 1.5vw;
+  box-sizing: border-box;
+}
+
+.alertBox strong {
+  color: black;
+}
+
+.clockIcon {
+  font-size: 1.2vw;
+  padding-top: 0.2vw;
+  color: #e65c19;
+}
+
+.alertText {
+  font-size: 0.8vw;
+  color: #444444;
+  margin: 0;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  width: 28vw;
+  margin-bottom: 1.5vw;
+}
+
+.outlineBtn {
+  background: none;
+  border: 0.1vw solid #000000;
+  background-color: #ffffff;
+  height: 2.8vw;
+  font-size: 0.85vw;
+  font-weight: 600;
+  border-radius: 0.8vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  color: #000000;
+}
+
+.plainBtn {
+  background: none;
+  border: 0.1vw solid #e5e7eb;
+  background-color: #ffffff;
+  height: 2.8vw;
+  font-size: 0.85vw;
+  font-weight: 600;
+  border-radius: 0.8vw;
+  cursor: pointer;
+  color: #000000;
+}
+
+.noAccountText {
+  font-size: 0.8vw;
+  color: #777777;
+  margin: 0;
+}
+
+.signupLink {
+  color: #000000;
+  font-size: 0.75vw;
+  letter-spacing: 0.02vw;
+  text-decoration: underline;
+  font-family: "nits-Pro-Display-Bold";
+  font-weight: 600;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18vw, 1fr));
+  gap: 2vw;
+  padding: 1vw 1vw;
+  padding-bottom: 2vw;
+  width: 100%;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  background-color: transparent;
+  border-radius: 0.5vw;
+  overflow: visible;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.optionsBtn {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  background: none;
+  border: none;
+  font-size: 1.4vw;
+  cursor: pointer;
+  color: black;
+  text-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 2.8vw;
+  right: -8.5vw;
+  background-color: #ffffff;
+  border: 0.05vw solid #e5e7eb;
+  border-radius: 0.5vw;
+  box-shadow: 0 0.4vw 1.5vw rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+  padding: 0.8vw 1vw;
+  cursor: pointer;
+  z-index: 20;
+  white-space: nowrap;
+  transform-origin: top right;
+  animation: slideDown 0.2s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenu span {
+  color: #e63946;
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
+.productDetails {
+  padding: 0.8vw 0;
+}
+
+.productTitle {
+  font-size: 0.75vw;
+  font-weight: 500;
+  text-transform: lowercase;
+  margin: 0 0 0.3vw 0;
+  color: #000000;
+}
+
+.priceAndSize {
+  display: flex;
+  align-items: center;
+  gap: 0.4vw;
+  font-size: 0.7vw;
+}
+
+.currentPrice {
+  color: #000000;
+  font-weight: 500;
+}
+
+.discountedPrice {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.divider {
+  color: #dddddd;
+}
+
+.selectedSize {
+  font-weight: 700;
+  color: #000000;
+}
+
+.addToCartBtn {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  height: 2.5vw;
+  font-size: 0.75vw;
+  font-weight: 600;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: #222222;
+}
+
+@media screen and (max-width: 430px) {
+  .wishlistPage {
+    height: auto;
+    min-height: 85vh;
+    padding-top: 25vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .topSection {
+    flex-direction: column;
+    gap: 3vw;
+    align-items: flex-start;
+    margin-bottom: 4vw;
+  }
+
+  .mainHeading {
+    font-size: 4vw;
+    padding-bottom: 1vw;
+  }
+
+  .subHeading {
+    font-size: 3vw;
+  }
+
+  .loginSaveBtn {
+    padding: 1.8vw 3vw;
+    font-size: 3vw;
+    border-radius: 8vw;
+    gap: 2vw;
+  }
+
+  .mainContent {
+    padding: 10vw 0;
+  }
+
+  .heartIconWrapper {
+    width: 12vw;
+    height: 12vw;
+    margin-bottom: 4vw;
+  }
+
+  .heartIconWrapper svg {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .contentTitle {
+    font-size: 4.5vw;
+    padding-bottom: 2vw;
+    text-align: center;
+  }
+
+  .contentDescription {
+    font-size: 4vw;
+    margin-bottom: 6vw;
+    text-align: center;
+  }
+
+  .heartSymbol {
+    font-size: 4vw;
+  }
+
+  .alertBox {
+    border-radius: 2vw;
+    align-items: flex-start;
+    gap: 3vw;
+    padding: 4vw 4vw;
+    margin-bottom: 6vw;
+    width: 90vw;
+  }
+
+  .clockIcon {
+    font-size: 5vw;
+    padding-top: 0.5vw;
+  }
+
+  .alertText {
+    font-size: 3.5vw;
+    line-height: 1.4;
+  }
+
+  .buttonGroup {
+    gap: 3.5vw;
+    width: 90vw;
+    margin-bottom: 6vw;
+  }
+
+  .outlineBtn {
+    border: 0.4vw solid #000000;
+    height: 13vw;
+    font-size: 4vw;
+    border-radius: 3vw;
+    gap: 2vw;
+  }
+
+  .plainBtn {
+    border: 0.4vw solid #e5e7eb;
+    height: 13vw;
+    font-size: 4vw;
+    border-radius: 3vw;
+  }
+
+  .noAccountText {
+    font-size: 3.8vw;
+    text-align: center;
+  }
+
+  .signupLink {
+    font-size: 3.8vw;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 6vw;
+    padding: 6vw 0;
+  }
+
+  .imageWrapper {
+    border-radius: 2vw;
+  }
+
+  .optionsBtn {
+    top: 3vw;
+    right: 3vw;
+    font-size: 6vw;
+  }
+
+  .dropdownMenu {
+    top: 10vw;
+    right: 3vw;
+    border-radius: 1.5vw;
+    padding: 3vw 4vw;
+    gap: 2.5vw;
+    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdownMenu svg {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .dropdownMenu span {
+    font-size: 3.5vw;
+  }
+
+  .productTitle {
+    font-size: 3.8vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .priceAndSize {
+    gap: 2vw;
+    font-size: 3.5vw;
+  }
+
+  .addToCartBtn {
+    height: 11vw;
+    font-size: 3.8vw;
+    border-radius: 1.5vw;
+  }
+}

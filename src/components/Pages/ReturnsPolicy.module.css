@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  margin: 0 auto;
+  padding: 6vw 4vw;
+  padding-bottom: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.mainTitle {
+  font-size: 1.3vw;
+  font-weight: bold;
+  letter-spacing: -0.02vw;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  padding-bottom: 1vw;
+}
+
+.introText {
+  font-size: 0.8vw;
+  color: #333;
+  line-height: 1.6;
+  max-width: 75vw;
+}
+
+.introText span {
+  font-weight: 700;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.sectionTitle {
+  font-size: 0.95vw;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  letter-spacing: -0.02vw;
+  text-transform: uppercase;
+}
+
+.subSection {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1vw;
+}
+
+.subTitle {
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.text {
+  font-size: 0.9vw;
+  padding-left: 1vw;
+  color: #444;
+  margin: 0;
+  padding-top: 0.2vw;
+  line-height: 1.6;
+  max-width: 75vw;
+}
+.list {
+  margin: 0;
+  padding-left: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.list li {
+  font-size: 0.8vw;
+  color: #444;
+  line-height: 1.6;
+  max-width: 72vw;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding: 22vw 6vw 10vw 6vw;
+    gap: 6vw;
+  }
+
+  .mainTitle {
+    font-size: 5.5vw;
+    letter-spacing: -0.05vw;
+    padding-bottom: 3vw;
+  }
+
+  .introText {
+    font-size: 3.8vw;
+    line-height: 5.5vw;
+    max-width: 100%;
+  }
+
+  .sectionBlock {
+    gap: 4vw;
+  }
+
+  .sectionTitle {
+    font-size: 4.5vw;
+    letter-spacing: -0.03vw;
+  }
+
+  .subSection {
+    padding-left: 2vw;
+  }
+
+  .subTitle {
+    font-size: 4vw;
+  }
+
+  .text {
+    font-size: 3.8vw;
+    line-height: 5.5vw;
+    padding-left: 2vw;
+    max-width: 100%;
+    padding-top: 1vw;
+  }
+
+  .list {
+    padding-top: 1vw;
+    padding-left: 6vw;
+    gap: 1vw;
+  }
+
+  .list li {
+    font-size: 3.8vw;
+    line-height: 5.5vw;
+    max-width: 100%;
+  }
+}

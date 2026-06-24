@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+  color: #ffffff;
+  padding: 0 4vw;
+}
+
+.title {
+  font-size: 2.5vw;
+  letter-spacing: -0.1vw;
+  margin: 0 0 1vw 0;
+}
+
+.subtitle {
+  font-size: 1.2vw;
+  color: #cccccc;
+  margin: 0 0 2.5vw 0;
+  letter-spacing: 0.02em;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5vw;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.8vw 1.8vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 430px) {
+  .title {
+    font-size: 5.8vw;
+    margin-bottom: 3vw;
+  }
+
+  .subtitle {
+    font-size: 3vw;
+    margin-bottom: 8vw;
+  }
+
+  .btnGroup {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .btn {
+    font-size: 2.8vw;
+    padding: 2.5vw 3.5vw;
+  }
+}

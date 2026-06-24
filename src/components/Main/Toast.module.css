@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.toastContainer {
+  position: fixed;
+  bottom: 3vw;
+  right: 3vw;
+  z-index: 9999;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.toastCard {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1vw 1vw;
+  border-radius: 1.5vw;
+  box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  border: 0.1vw solid #e5e5e5;
+}
+
+.toastImageWrapper {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 1vw;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.toastImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.toastContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+}
+
+.productName {
+  font-weight: 700;
+  font-size: 1vw;
+  color: #000000;
+  margin: 0;
+}
+
+.statusText {
+  font-size: 0.8vw;
+  color: #666666;
+  margin: 0;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 430px) {
+  .toastContainer {
+    bottom: 6vw;
+    right: 5vw;
+    left: 5vw;
+    width: 90%;
+    animation: slideUpMobile 0.3s ease-out;
+  }
+
+  .toastCard {
+    width: 100%;
+    padding: 3vw 5vw;
+    border-radius: 4vw;
+    gap: 4vw;
+    border-width: 0.3vw;
+  }
+
+  .toastImageWrapper {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 2.5vw;
+  }
+
+  .productName {
+    font-size: 3.8vw;
+  }
+
+  .statusText {
+    font-size: 3.2vw;
+  }
+}
+
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

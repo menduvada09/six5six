@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.cartOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.5vw);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cartOverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cartPanel {
+  position: absolute;
+  top: 4vh;
+  right: -32vw;
+  width: 28vw;
+  height: 92vh;
+  background-color: #ffffff;
+  box-shadow: 0 0.5vw 2vw rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+  box-sizing: border-box;
+  border-radius: 0.4vw;
+  overflow: hidden;
+}
+
+.cartOverlay.active .cartPanel {
+  right: 2vw;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 1.5vw;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bagTitle {
+  font-size: 1vw;
+  font-family: "nits-Pro-Display-Bold";
+  color: #000000;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn svg {
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
+.cartContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.emptyCartView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2vw;
+}
+
+.emptyHeading {
+  font-size: 1vw;
+  letter-spacing: -0.02vw;
+  font-family: "nits-Pro-Display-Bold";
+  text-transform: uppercase;
+  margin-bottom: 1vw;
+  color: #000000;
+}
+
+.continueBtn {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 0.8vw 1.5vw;
+  font-size: 0.7vw;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.9vw;
+  transition: background-color 0.2s ease;
+}
+
+.continueBtn:hover {
+  background-color: #333333;
+}
+
+.loginPrompt {
+  font-size: 0.75vw;
+  color: #555555;
+  letter-spacing: -0.02vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+}
+
+.loginPrompt span {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  gap: 0.2vw;
+}
+
+.loginLink a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.itemsWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.itemList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.cartItem {
+  display: flex;
+  gap: 1vw;
+  align-items: flex-start;
+}
+
+.itemImg {
+  width: 6vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.itemDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+}
+
+.itemTitle {
+  font-size: 0.95vw;
+  font-family: "nits-Pro-Display-Bold";
+  color: #000000;
+}
+
+.itemMetaRow {
+  display: flex;
+  gap: 1vw;
+  font-size: 0.8vw;
+  color: #333333;
+}
+
+.itemCustomization {
+  font-size: 0.8vw;
+  color: #666666;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 0.4vw;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+}
+
+.quantitySelector button {
+  background: none;
+  border: none;
+  width: 2vw;
+  height: 2vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8vw;
+}
+
+.quantitySelector button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.quantitySelector span {
+  font-size: 0.8vw;
+  min-width: 1.5vw;
+  text-align: center;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: #000000;
+  text-decoration: underline;
+  font-size: 0.8vw;
+  cursor: pointer;
+}
+
+.cartFooter {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5vw;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summaryLabel {
+  font-size: 1.1vw;
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.summaryValue {
+  font-size: 1.1vw;
+  font-family: "nits-Pro-Display-Bold";
+}
+
+.taxNotice {
+  font-size: 0.75vw;
+  color: #555555;
+}
+
+.checkoutBtn {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 1vw;
+  font-size: 0.9vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .cartPanel {
+    width: 46vw;
+    right: -50vw;
+    height: 96vh;
+    top: 2vh;
+  }
+
+  .cartOverlay.active .cartPanel {
+    right: 2vw;
+  }
+
+  .cartHeader {
+    padding: 2vw 3vw;
+  }
+
+  .bagTitle {
+    font-size: 2.5vw;
+  }
+
+  .closeBtn svg {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .emptyCartView {
+    padding: 4vw;
+  }
+
+  .emptyHeading {
+    font-size: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .continueBtn {
+    font-size: 1.8vw;
+    padding: 1.5vw 3vw;
+    max-width: 35vw;
+    margin-bottom: 2vw;
+  }
+
+  .loginPrompt {
+    font-size: 1.6vw;
+    gap: 0.5vw;
+  }
+
+  .itemList {
+    padding: 3vw;
+    gap: 3vw;
+  }
+
+  .itemImg {
+    width: 12vw;
+  }
+
+  .itemTitle {
+    font-size: 2.2vw;
+  }
+
+  .itemMetaRow {
+    font-size: 1.8vw;
+    gap: 3vw;
+  }
+
+  .itemCustomization {
+    font-size: 1.6vw;
+  }
+
+  .quantitySelector button {
+    width: 4vw;
+    height: 4vw;
+    font-size: 1.8vw;
+  }
+
+  .quantitySelector span {
+    font-size: 1.8vw;
+    min-width: 3vw;
+  }
+
+  .removeBtn {
+    font-size: 1.8vw;
+  }
+
+  .cartFooter {
+    padding: 3vw;
+    gap: 1.5vw;
+  }
+
+  .summaryRow {
+    font-size: 2.4vw;
+  }
+
+  .summaryLabel,
+  .summaryValue {
+    font-size: 2.4vw;
+  }
+
+  .taxNotice {
+    font-size: 1.6vw;
+  }
+
+  .checkoutBtn {
+    padding: 2vw;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .cartPanel {
+    width: 92vw;
+    right: -100vw;
+    height: 96vh;
+    top: 2vh;
+    border-radius: 2.5vw;
+  }
+
+  .cartOverlay.active .cartPanel {
+    right: 4vw;
+  }
+
+  .cartOverlay {
+    backdrop-filter: blur(1.5vw);
+  }
+
+  .cartHeader {
+    padding: 4.5vw 5vw;
+  }
+
+  .bagTitle {
+    font-size: 4.5vw;
+  }
+
+  .closeBtn svg {
+    width: 5.5vw;
+    height: 5.5vw;
+  }
+
+  .emptyCartView {
+    padding: 6vw;
+  }
+
+  .emptyHeading {
+    font-size: 5vw;
+    margin-bottom: 5vw;
+    letter-spacing: -0.05vw;
+  }
+
+  .continueBtn {
+    font-size: 2.5vw;
+    padding: 3.5vw 6vw;
+    margin-bottom: 4vw;
+  }
+
+  .loginPrompt {
+    font-size: 3.2vw;
+    gap: 1.5vw;
+    letter-spacing: -0.05vw;
+  }
+
+  .loginPrompt span {
+    gap: 1vw;
+  }
+
+  .itemList {
+    padding: 5vw;
+    gap: 6vw;
+  }
+
+  .cartItem {
+    gap: 4vw;
+  }
+
+  .itemImg {
+    width: 22vw;
+  }
+
+  .itemDetails {
+    gap: 1.5vw;
+  }
+
+  .itemTitle {
+    font-size: 4.2vw;
+  }
+
+  .itemMetaRow {
+    font-size: 3.5vw;
+    gap: 5vw;
+  }
+
+  .itemCustomization {
+    font-size: 3.2vw;
+  }
+
+  .itemActions {
+    gap: 4vw;
+    margin-top: 1.5vw;
+  }
+
+  .quantitySelector button {
+    width: 8vw;
+    height: 8vw;
+    font-size: 3.8vw;
+  }
+
+  .quantitySelector span {
+    font-size: 3.8vw;
+    min-width: 6vw;
+  }
+
+  .removeBtn {
+    font-size: 3.5vw;
+  }
+
+  .cartFooter {
+    padding: 5vw;
+    gap: 4vw;
+  }
+
+  .summaryLabel,
+  .summaryValue {
+    font-size: 4.5vw;
+  }
+
+  .taxNotice {
+    font-size: 3.2vw;
+  }
+
+  .checkoutBtn {
+    padding: 4vw;
+    font-size: 4vw;
+  }
+}

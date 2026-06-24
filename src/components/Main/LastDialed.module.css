@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "nits-Pro-Display-Regular";
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0.69vw auto;
+  padding: 1.38vw;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.73vw;
+}
+
+.leftHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.11vw;
+}
+
+.title {
+  font-size: 1.2vw;
+  font-weight: 700;
+  color: #000000;
+}
+
+.shopAllButton {
+  padding: 0.8vw 2.5vw;
+  border-radius: 1.38vw;
+  border: 0.06vw solid #ffffff;
+  background-color: #ffffff;
+  font-size: 1.1vw;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.38vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 120%;
+  background-color: #ededed;
+  border-radius: 1.11vw;
+}
+
+.badgeRow {
+  position: absolute;
+  top: 0.83vw;
+  left: 0.83vw;
+  display: flex;
+  gap: 0.41vw;
+  z-index: 2;
+}
+
+.discountBadge {
+  background-color: #e26a37;
+  color: #ffffff;
+  font-size: 0.62vw;
+  font-weight: bold;
+  padding: 0.2vw 0.41vw;
+  border-radius: 0.27vw;
+}
+
+.seasonBadge {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 0.62vw;
+  font-weight: bold;
+  padding: 0.2vw 0.41vw;
+  border-radius: 0.27vw;
+  border: 0.06vw solid #e0e0e0;
+}
+
+.bookmarkButton {
+  position: absolute;
+  top: 0.83vw;
+  right: 0.83vw;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 1.5vw;
+  height: 1.5vw;
+  color: #999999;
+  z-index: 2;
+}
+
+.productImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
+  background-color: transparent;
+  mix-blend-mode: multiply;
+}
+
+.ratingBadgeContainer {
+  position: absolute;
+  bottom: 0.83vw;
+  left: 0.83vw;
+  display: flex;
+  align-items: center;
+  height: 1.66vw;
+  z-index: 2;
+}
+
+.ratingContent {
+  display: flex;
+  align-items: center;
+  gap: 0.2vw;
+  background-color: transparent;
+}
+
+.ratingStar {
+  height: 1.5vw;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.ratingNumber {
+  font-size: 0.97vw;
+  font-weight: 700;
+  color: #e26a37;
+  line-height: 1;
+}
+
+.detailsContainer {
+  padding: 0.83vw 0.27vw 0 0.27vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.41vw;
+}
+
+.topDetailsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.55vw;
+}
+
+.productTitle {
+  font-size: 0.83vw;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.83vw;
+}
+
+.oldPrice {
+  font-size: 0.97vw;
+  color: #e26a37;
+  text-decoration: line-through;
+}
+
+.currentPrice {
+  font-size: 0.97vw;
+  font-weight: 600;
+  color: #000000;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55vw;
+  background-color: #eaeaea;
+  border: none;
+  padding: 0.41vw 0.97vw;
+  border-radius: 1.38vw;
+  cursor: pointer;
+  height: 1.94vw;
+  flex-shrink: 0;
+}
+
+.addText {
+  font-size: 0.76vw;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 0.03vw;
+}
+
+.btnIconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 0.83vw;
+  height: 0.97vw;
+}
+
+.btnHandle {
+  width: 0.41vw;
+  height: 0.2vw;
+  border: 0.08vw solid #000000;
+  border-bottom: none;
+  border-top-left-radius: 0.13vw;
+  border-top-right-radius: 0.13vw;
+}
+
+.btnBagBody {
+  width: 0.76vw;
+  height: 0.62vw;
+  border: 0.1vw solid #000000;
+  border-radius: 0.13vw;
+  background-color: transparent;
+  margin-top: -0.06vw;
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    margin: 2vw auto;
+    padding: 4vw;
+  }
+
+  .headerRow {
+    margin-bottom: 6vw;
+  }
+
+  .leftHeader {
+    gap: 3vw;
+  }
+
+  .title {
+    font-size: 3vw;
+  }
+
+  .shopAllButton {
+    padding: 1vw 3.5vw;
+    border-radius: 5vw;
+    font-size: 3vw;
+    border-width: 0.3vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6vw 3.5vw;
+  }
+
+  .imageContainer {
+    border-radius: 4vw;
+  }
+
+  .badgeRow {
+    top: 3vw;
+    left: 3vw;
+    gap: 1.5vw;
+  }
+
+  .discountBadge,
+  .seasonBadge {
+    font-size: 2.2vw;
+    padding: 0.8vw 1.8vw;
+    border-radius: 1vw;
+  }
+
+  .seasonBadge {
+    border-width: 0.3vw;
+  }
+
+  .bookmarkButton {
+    top: 3vw;
+    right: 3vw;
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .productImg {
+    height: 85%;
+    width: 85%;
+  }
+
+  .ratingBadgeContainer {
+    bottom: 3vw;
+    left: 3vw;
+    height: auto;
+  }
+
+  .ratingContent {
+    gap: 1vw;
+  }
+
+  .ratingStar {
+    height: 3.5vw;
+  }
+
+  .ratingNumber {
+    font-size: 3.2vw;
+  }
+
+  .detailsContainer {
+    padding: 3vw 1vw 0 1vw;
+    gap: 2.5vw;
+  }
+
+  .topDetailsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3vw;
+  }
+
+  .productTitle {
+    font-size: 3vw;
+    width: 100%;
+  }
+
+  .priceContainer {
+    gap: 3vw;
+  }
+
+  .oldPrice,
+  .currentPrice {
+    font-size: 3vw;
+  }
+
+  .addButton {
+    width: 100%;
+    height: 9.5vw;
+    padding: 0;
+    gap: 2vw;
+    border-radius: 2vw;
+    justify-content: center;
+  }
+
+  .addText {
+    font-size: 3vw;
+  }
+
+  .btnIconContainer {
+    width: 3vw;
+    height: 3.5vw;
+  }
+
+  .btnHandle {
+    width: 1.8vw;
+    height: 0.8vw;
+    border-width: 0.3vw;
+    border-top-left-radius: 0.6vw;
+    border-top-right-radius: 0.6vw;
+  }
+
+  .btnBagBody {
+    width: 3.2vw;
+    height: 2.6vw;
+    border-width: 0.3vw;
+    border-radius: 0.6vw;
+    margin-top: -0.2vw;
+  }
+}
