@@ -46,7 +46,9 @@ const Footer = () => {
               BEFORE.
             </p>
             <div className={styles.timeline}>
-              <button>SHOP NOW</button>
+              <Link to="/new-in">
+                <button>SHOP NOW</button>
+              </Link>
               <div className={styles.time1}>[INDIA {time}]</div>
             </div>
           </div>
