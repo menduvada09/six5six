@@ -6,7 +6,6 @@ import {
   Outlet,
 } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
-
 import Main from "./components/Main/Main";
 import ProductList from "./components/Products/ProductList";
 import Navbar from "./components/Main/Navbar";
