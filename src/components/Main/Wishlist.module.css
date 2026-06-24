@@ -434,7 +434,7 @@ html {
   .productGrid {
     grid-template-columns: 1fr;
     gap: 6vw;
-    padding: 6vw 0;
+    padding-bottom: 6vw;
   }
 
   .imageWrapper {
@@ -473,6 +473,7 @@ html {
   .priceAndSize {
     gap: 2vw;
     font-size: 3.5vw;
+    padding-bottom: 1.5vw;
   }
 
   .addToCartBtn {
